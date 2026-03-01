@@ -8,7 +8,7 @@ function Creators() {
     const fetchCreators = async () => {
       // Getting the data
       const { data } = await axios.get(
-        `${process.env.VITE_BACKEND_URL}/api/users/get-admin`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/users/get-admin`,
         {
           withCredentials: true, // in index.js we have set the credentials true so here we are using that only
         },

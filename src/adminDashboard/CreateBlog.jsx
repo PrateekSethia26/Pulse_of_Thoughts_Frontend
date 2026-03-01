@@ -36,7 +36,7 @@ function CreateBlog() {
     try {
       // Post request to the server to register the user
       const { data } = await axios.post(
-        `${process.env.VITE_BACKEND_URL}/api/blog/createBlog`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/blog/createBlog`,
         formData,
         { withCredentials: true },
         {

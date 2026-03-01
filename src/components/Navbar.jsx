@@ -18,7 +18,7 @@ function Navbar() {
     e.preventDefault(); // Prevent from browser refresh
     try {
       const { data } = await axios.get(
-        `${process.env.VITE_BACKEND_URL}/api/users/logout`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/users/logout`,
         {
           withCredentials: true,
         },

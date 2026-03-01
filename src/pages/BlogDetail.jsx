@@ -11,7 +11,7 @@ function BlogDetail() {
       try {
         // Post request to the server to register the user
         const { data } = await axios.get(
-          `${process.env.VITE_BACKEND_URL}/api/blog/single-Blog/${id}`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/blog/single-Blog/${id}`,
           { withCredentials: true },
           {
             // Defining the headers that the data is the form data

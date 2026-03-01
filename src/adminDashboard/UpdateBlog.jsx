@@ -70,7 +70,7 @@ function UpdateBlog() {
     try {
       // Post request to the server to register the user
       const { data } = await axios.put(
-        `${process.env.VITE_BACKEND_URL}/api/blog/updateBlog/${id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/blog/updateBlog/${id}`,
         formData,
         { withCredentials: true },
         {

@@ -30,7 +30,7 @@ function Login() {
     try {
       // Post request to the server to register the user
       const { data } = await axios.post(
-        `${process.env.VITE_BACKEND_URL}/api/users/login`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/users/login`,
         { email, password, role },
         { withCredentials: true }, // This is used to send cookies with the request
         {

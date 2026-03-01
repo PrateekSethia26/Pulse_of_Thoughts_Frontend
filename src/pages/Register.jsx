@@ -44,7 +44,7 @@ function Register() {
     try {
       // Post request to the server to register the user
       const { data } = await axios.post(
-        `${process.env.VITE_BACKEND_URL}/api/users/register`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/users/register`,
         formData,
         {
           // Defining the headers that the data is the form data

@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
         console.log(token);
         if (token) {
           const response = await axios.get(
-            `${process.env.VITE_BACKEND_URL}/api/users/my-profile`,
+            `${import.meta.env.VITE_BACKEND_URL}/api/users/my-profile`,
             {
               withCredentials: true,
               headers: {
@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(
-          `${process.env.VITE_BACKEND_URL}/api/blog/all-Blogs`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/blog/all-Blogs`,
         );
         console.log(response);
         setBlogs(response.data); // taking the blogs and setting the response(blog) in the blogs state
